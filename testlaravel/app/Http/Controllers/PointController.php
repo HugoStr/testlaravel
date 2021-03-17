@@ -10,7 +10,7 @@ class PointController extends Controller
 {
     public function index(){
 
-        $points=DB::select('SELECT * FROM points');
+        $points=Point::all();
         return response()->json($points);
 
     }
@@ -18,8 +18,9 @@ class PointController extends Controller
     public function store(Request $request){
 
         $point = new Point();
-        $point->value= $request->input('valeur');
-        $point->value= $request->input('conso-prod');
+        $point->value= $request->input('value');
+        $point->conso_prod= $request->input('conso_prod');
+        $point->save();
 
     }
 }
