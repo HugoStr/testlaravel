@@ -1,2 +1,2 @@
 # testlaravel
-Petite appli test faite avec Laravel
+Petite application test faite avec Laravel
