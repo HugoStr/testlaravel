@@ -16,8 +16,8 @@ class CreatePointsTable extends Migration
         Schema::create('points', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->value();
-            $table->conso_prod();
+            $table->integer('value');
+            $table->integer('conso_prod');
         });
     }
 
